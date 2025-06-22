@@ -1,50 +1,71 @@
-# Welcome to your Expo app 👋
+# Amrutam Mobile App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern React Native app built with Expo, inspired by Figma designs for routine management, reminders, and patient care.
 
-## Get started
+## Features
+- Routine management (create, assign, and view routines)
+- Patient management and chat
+- Multi-step routine creation with reminders, benefits, and caregivers
+- Custom time slot and reminder item flows
+- Beautiful, Figma-inspired UI
 
-1. Install dependencies
+## Prerequisites
+- [Node.js](https://nodejs.org/) (v16 or later recommended)
+- [Yarn](https://classic.yarnpkg.com/lang/en/) or npm
+- [Expo CLI](https://docs.expo.dev/get-started/installation/):
+  ```sh
+  npm install -g expo-cli
+  ```
+- (Optional) [Expo Go](https://expo.dev/client) app on your iOS/Android device for live preview
 
-   ```bash
+## Setup Instructions
+
+1. **Clone the repository or download the code.**
+
+2. **Navigate to the project directory:**
+   ```sh
+   cd mobile-app
+   ```
+
+3. **Install dependencies:**
+   ```sh
    npm install
+   # or
+   yarn install
    ```
 
-2. Start the app
-
-   ```bash
+4. **Start the Expo development server:**
+   ```sh
    npx expo start
+   # or
+   yarn start
    ```
 
-In the output, you'll find options to open the app in a
+5. **Run the app:**
+   - **On your device:**
+     - Scan the QR code in your terminal or browser using the Expo Go app.
+   - **On an emulator/simulator:**
+     - Press `a` for Android or `i` for iOS in the Expo CLI terminal.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Project Structure
+- `app/` — Main app screens and navigation
+- `components/` — Reusable UI components
+- `assets/` — Images, icons, and fonts
+- `constants/` — Theme and color constants
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Customization
+- Update images in `assets/images/` to match your brand or Figma assets.
+- Adjust theme/colors in `constants/Colors.ts`.
+- Modify or extend screens in `app/` as needed.
 
-## Get a fresh project
+## Notes
+- The app uses [expo-router](https://expo.github.io/router/docs/) for file-based navigation.
+- Some screens use dummy/static data for demonstration. Replace with your API or state management as needed.
+- For best results, use the latest Expo SDK and keep dependencies up to date.
 
-When you're ready, run:
+## Troubleshooting
+- If you encounter issues with dependencies, try deleting `node_modules` and `package-lock.json`/`yarn.lock`, then reinstall.
+- For native module errors, ensure you are using Expo Go or have run `npx expo prebuild` for a bare workflow.
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## License
+MIT
