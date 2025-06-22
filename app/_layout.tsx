@@ -1,4 +1,4 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import { ThemeProvider, DarkTheme, DefaultTheme } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -20,7 +20,14 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="routine" options={{ headerShown: false }} />
+        <Stack.Screen name="chat" options={{ headerShown: false }} />
+        <Stack.Screen name="assign-routine" options={{ headerShown: false }} />
+        <Stack.Screen name="create-routine" options={{ headerShown: false }} />
+        <Stack.Screen name="create-routine-step2" options={{ headerShown: false }} />
+        <Stack.Screen name="add-reminder-item" options={{ headerShown: false }} />
+        <Stack.Screen name="add-reminder-item-details" options={{ headerShown: false }} />
+        <Stack.Screen name="add-reminder-item-review" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
